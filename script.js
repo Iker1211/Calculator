@@ -130,3 +130,32 @@ function handle_equation(equation) {
     return result;
 }
 
+// Event Listener for keyboard button press
+document.addEventListener('keydown', (event) => {
+	
+	let getOperators = {
+		'/': 'divide',
+		'x': 'multiply',
+		'*': 'multiply',
+		'%': 'remainder',
+		'+': 'plus',
+		'-': 'minus'
+	}
+
+	if(!isNaN(event.key) && event.key !== ' '){
+		document.getElementById(`digit-${event.key}`).click();
+	}
+	if (['/', 'x', '+', '-', '*', '%'].includes(event.key)) {
+		document.getElementById(getOperators[event.key]).click();
+	}
+	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {
+		document.getElementById('clear').click();	
+	}
+	if (event.key === '=' || event.key === 'Enter') {
+		document.getElementById('equals').click();	
+	}
+	if (event.key === '.') {
+		document.getElementById('decimal').click();	
+	}
+});
+
