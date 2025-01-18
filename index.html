@@ -3,42 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <meta name="author" content="Iker Velez">
+    <title>The 42 Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script  defer src="script.js"></script>
 </head>
-<body>
+<body> <!--Sombra al display y relieve a los botones-->
     <div class="calculator">
         <div class="display">
                 <img class="dragon" src="images/Chinese dragon 飞龙在天 金左 (2).gif" width="50px" height="auto" alt="epic chinese dragon">
 
             <div class="numbers">
-                <div id="result">0000000000</div>
-                <div id="input">000000000</div>
+                <output class="user-input" type="text" id="user-input">00000000000000000000000</output>
+                <output class="result" type="text" id="result">&nbsp;</output>
             </div>
         </div>
         <div class="buttons">
-            <button class="operator double">Clear</button>
-            <button class="operator double">Delete</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator">÷</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator">×</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operator">-</button>
-            <button>.</button>
-            <button>0</button>
-            <button class="operator">=</button>
-            <button class="operator">+</button>
-            <button class="operator anchor"><a href="https://www.iker42.blog/" rel="noreferrer" target="_blank">42</a></button>
-            <button class="operator anchor"><a href="https://x.com/iker_velez" rel="noreferrer" target="_blank"><img alt="twitter logo" src="images/11053970_x_logo_twitter_new_brand_icon.png" width="100%" height="auto"></a></button>
-            <button class="operator anchor"><a href="https://github.com/Iker1211" rel="noreferrer" target="_blank"><img alt="github-logo" src="images/github-logo.png" width="100%" height="auto"></a></button>
-            <button class="operator anchor"><a href="https://www.upwork.com/freelancers/~01adb4e14aa0c10d0b?viewMode=1" rel="noreferrer" target="_blank"><img alt="upwork logo" src="images/icons8-upwork-50.png" width="100%" height="auto"></a></button>
+            <button class="operator double" data-type="reset" id="allclear">Clear</button>
+            <button class="operator double" data-type="backspace" id="clear">Delete</button>
+            <button class="digits" data-type="number" value="7" id="7">7</button>
+            <button class="digits" data-type="number" value="8" id="8">8</button>
+            <button class="digits" data-type="number" value="9" id="9">9</button>
+            <button class="operator" data-type="operator" id="divide" value="/">÷</button>
+            <button class="digits" data-type="number" value="4" id="4">4</button>
+            <button class="digits" data-type="number" value="5" id="5">5</button>
+            <button class="digits" data-type="number" value="6" id="6">6</button>
+            <button class="operator" data-type="operator" id="multiply" value="x">×</button>
+            <button class="digits" data-type="number" value="1" id="1">1</button>
+            <button class="digits" data-type="number" value="2" id="2">2</button>
+            <button class="digits" data-type="number" value="3" id="3">3</button>
+            <button class="operator" data-type="operator" id="minus" value="-">-</button>
+            <button class="decimal" data-type="decimal" id="decimal" value=".">.</button>
+            <button id="0" data-type="number" value="0" id="0">0</button>
+            <button class="operator" data-type="equal" id="equals" value="=">=</button>
+            <button class="operator" data-type="operator" id="plus" value="+">+</button>
+            <button class="operator anchor" data-type="link"><a href="https://www.iker42.blog/" rel="noreferrer" target="_blank">42</a></button>
+            <button class="operator anchor" data-type="link"><a href="https://x.com/iker_velez" rel="noreferrer" target="_blank"><img alt="twitter logo" src="images/11053970_x_logo_twitter_new_brand_icon.png" width="100%" height="auto"></a></button>
+            <button class="operator anchor" data-type="link"><a href="https://github.com/Iker1211" rel="noreferrer" target="_blank"><img alt="github-logo" src="images/github-logo.png" width="100%" height="auto"></a></button>
+            <button class="operator anchor" data-type="link"><a href="https://www.upwork.com/freelancers/~01adb4e14aa0c10d0b?viewMode=1" rel="noreferrer" target="_blank"><img alt="upwork logo" src="images/icons8-upwork-50.png" width="100%" height="auto"></a></button>
         </div>
     </div>
 </body>

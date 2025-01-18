@@ -48,21 +48,22 @@
     justify-content: space-between;
 
     .numbers {
-      display: inline-block;
+      display: flex;
+      flex-direction: column;
     }
 
     .dragon {
       display: inline-block;
     }
 
-    #result {
+    #user-input {
       text-align: right;
       color: var(--gray);
       font-size: var(--font-size-base);
       border: none;
     }
 
-    #input {
+    #result {
       text-align: right;
       color: var(--black);
       font-size: var(--font-size-xl);
@@ -118,4 +119,36 @@
   
   .double {
     grid-column: span 2;
+  }
+
+  .display {
+    background-color: var(--white);
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  button {
+    font-size: var(--font-size-lg);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--gray);
+    color: var(--white);
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    transition: top 0.1s, box-shadow 0.1s;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    top: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
