@@ -23,6 +23,7 @@
     font-family: var(--font-family);
     background-color: var(--blue);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -151,4 +152,11 @@
     transform: scale(0.95);
     top: 2px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  footer {
+    margin-top: 24px;
+    color: var(--white);
+    font-weight: bolder;
+    text-shadow: -2px 3px 0px rgba(0,0,0,0.4);
   }
