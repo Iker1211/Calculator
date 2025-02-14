@@ -155,8 +155,17 @@
   }
 
   footer {
+    position: relative;
     margin-top: 24px;
     color: var(--white);
     font-weight: bolder;
     text-shadow: -2px 3px 0px rgba(0,0,0,0.4);
   }
+
+.credit {
+  width: min-content;
+  position: absolute;
+  font-size: small;
+  right: 50vw;
+  bottom: 84vh;
+}
